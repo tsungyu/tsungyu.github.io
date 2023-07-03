@@ -1,0 +1,99 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"> 
+	<title>People Localization</title>
+		
+      <link rel="shortcut icon" href="./Tsung_Yu_files/smallPhoto.jpg">
+      <link href="./Tsung_Yu_files/sub.css" rel="stylesheet" type="text/css"> 
+      
+      
+</head> 
+         
+<body> 
+	<div id="wrap"> 
+		<div id='head'>
+			<!--
+			<h2 style="text-align:center">People Localization in A Camera Network Combining Background Subtraction and Scene-Aware Human Detection</h2>
+			
+	    <h3 style="text-align:center"><font face="times new roman">Tung-Ying Lee<sup>1</sup>, Tsung-Yu Lin<sup>1</sup>, Szu-Hao Huang<sup>1</sup>, Shang-Hong Lai<sup>1</sup>, and Shang-Chih Hung<sup>2</sup></font></h3>
+	    <h3 style="text-align:center"><font face="times new roman"><sup>1</sup>National Tsing Hua University and <sup>2</sup>ITRI</font></h3>
+			-->
+			<center>
+				<font size='6' face="times new roman"><b>People Localization in A Camera Network Combining Background Subtraction and Scene-Aware Human Detection</b></font><br><br>
+				<font size='4' face="times new roman">Tung-Ying Lee<sup>1</sup>, Tsung-Yu Lin<sup>1</sup>, Szu-Hao Huang<sup>1</sup>, Shang-Hong Lai<sup>1</sup>, and Shang-Chih Hung<sup>2</sup></font><br><br>
+				<font size='4' face="times new roman"><sup>1</sup>National Tsing Hua University and <sup>2</sup>ITRI</font><br><br>
+			</center>
+		</div>
+		<font size='2' face="times new roman"><a href="../index.htm">[back to Tsung-Yu Lin]</a></font><br>
+		<hr style="background:black; border:0; height:1px">
+		<div id="content">
+			
+			
+			<h2>Problem</h2>
+			<div><font size='4' face="times new roman">For visual surveillance tracking, to separate multiple targets when they are mutually occluded in the view of a single camera is extremely challenging. 
+				Now that multiple cameras can provide different perspectives, how to localize the targets on the 3D ground plane in a network of cameras becomes an important issue. 
+				Previous methods usually solve the localization problem iteratively based on background subtraction results, yet high-level image information is neglected. 
+				In order to fully exploit the image information and thus to gain superior localization precision, we suggest incorporating human detection into surveillance system. 
+				We develop a novel formulation combining human detection and background subtraction result to localize targets on the ground plane and solve it by convex optimization.</font>
+			</div>
+			<br><br>
+			
+			<center> 
+        <img src="./system_overview.jpg" alt="system overview" width="90%">
+      </center>
+      
+      <p align="justify">      
+      <font size='4'><b>Figure</b> The overview of our method. The first step is to train a human detector and then create a map P<sub>HUM</sub><sup>c</sup>. Secondly, foreground regions are used in generating the map P<sub>BS</sub><sup>c</sup>. 
+      Finally, these two kinds of information are integrated into an objective function of true occupancy map, and the solution is obtained by convex optimization.</font>
+      </p>
+      <br><br>
+      
+      
+			<hr style="background:black; border:0; height:1px">
+			
+			
+			<h2>Result</h2>
+			
+			<div><font size='4' face="times new roman">We evaluate our method on three public datasets, namely, 6p sequence, Terrace sequence, and Passageway sequence. 
+				Each sequence contains four views and ground truth map. First, we test our method on Terrace sequence and show that fusion the maps generate by human detection and background 
+				subtraction can improve the localization result over using a single map respectively. We also show the results on other two datasets.</font>
+			</div>
+			
+			<br>
+			<center> 
+        <img src="./table1.jpg" alt="Table" width="90%">
+      </center>
+      <p align='center'>
+      	<font size='4'><b>Table 1.</b> Compare our fusion method on Terrace sequence to using human detection and background subtraction respectively</font>
+      </p>
+      <br>
+			<center> 
+        <img src="./table2.jpg" alt="Table" width="90%">
+      </center>
+      <p align='center'>
+      	<font size='4'><b>Table 2.</b> Evaluation of our method on 6p sequence and Passageway sequence</font>
+      </p>
+      <br>
+      <div><font size='4' face="times new roman">Some visualization results. The boxes are rendered by back-projecting cubes, which height are 1.75m, located on 3D ground plane.</font>
+			</div>
+			<br><br>
+			<center> 
+        <a href="./MMM.jpg"><img src="./MMM.jpg" alt="localized boxes" width="80%"></a>
+      </center>
+      <br><br>
+      
+			<hr style="background:black; border:0; height:1px">
+			<br>
+			
+			<h2>Publication</h2>
+			<font size='4' face="times new roman">Tung-Ying Lee, Tsung-Yu Lin, Szu-Hao Huang, Shang-Hong Lai, Shang-Chih Hung, 
+				People localization in a camera network combining background subtraction and scene-aware human detection, Proceedings of the 17th international conference on Advances in multimedia modeling(MMM), 2011,
+				<a href="http://link.springer.com/chapter/10.1007%2F978-3-642-17832-0_15?LI=true#page-1">[pdf]</a>
+			</font>
+			
+      <br><br>
+		</div>
+	
+	</dive>
+	
+	
+	
+</body></html>

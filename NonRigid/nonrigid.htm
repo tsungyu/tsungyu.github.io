@@ -1,0 +1,100 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"> 
+	<title>NRSFM</title>
+		
+      <link rel="shortcut icon" href="./Tsung_Yu_files/smallPhoto.jpg">
+      <link href="./Tsung_Yu_files/sub.css" rel="stylesheet" type="text/css"> 
+      
+      
+</head> 
+         
+<body> 
+	<div id="wrap"> 
+		<div id='head'>
+			<!--
+			<h2 style="text-align:center">People Localization in A Camera Network Combining Background Subtraction and Scene-Aware Human Detection</h2>
+			
+	    <h3 style="text-align:center"><font face="times new roman">Tung-Ying Lee<sup>1</sup>, Tsung-Yu Lin<sup>1</sup>, Szu-Hao Huang<sup>1</sup>, Shang-Hong Lai<sup>1</sup>, and Shang-Chih Hung<sup>2</sup></font></h3>
+	    <h3 style="text-align:center"><font face="times new roman"><sup>1</sup>National Tsing Hua University and <sup>2</sup>ITRI</font></h3>
+			-->
+			<center>
+				<font size='6' face="times new roman"><b>Combining Shape Prior with Non-Rigid SfM for Recovering Specific 3D deformable Surfaces</b></font><br><br>
+				<font size='4' face="times new roman">Tsung-Yu Lin and Shang-Hong Lai</font><br><br>
+				<font size='4' face="times new roman">National Tsing Hua University</font><br><br>
+			</center>
+		</div>
+		<font size='2' face="times new roman"><a href="../index.htm">[back to Tsung-Yu Lin]</a></font><br>
+		<hr style="background:black; border:0; height:1px">
+		
+		<div id="content">
+			
+			<h2>Problem</h2>
+			<div><font size='4' face="times new roman">When a deforming object is captured by a moving camera, non-rigid structure from motion (NRSFM) aims to obtain the varying 3D structure and camera motion from uncalibrated 2D point tracks. 
+				However, if the object deforms arbitrarily, reconstruction becomes under-constrained. Previous methods assume that the deforming structure could be reconstructed by a linear basis, the assumption Which is invalid in most real cases. 
+				In this thesis, we aims to focus NRSFM on a specific defoming object, for example, human faces in the experiments, so that a pre-trained prior model could be available. 
+				We categorize 2D point tracks into two groups, namely, well-defined landmarks and detected interesting points, and tackle the problem by two steps. First, we model the 3D structure of well-defined landmarks in probabilistic framework 
+				and then optimize it by MAP manner to obtain initial structure and camera motion. Second, we jointly optimize the 3D structure of well-defined landmarks and detected interesting points and refine camera motion by 
+				introducing suface constraint and distance constraint into final optimization. We further reconstruct a complete surface by fitting the surface model to the estimated structer points and a novel view of surface could be synthesized.</font>
+			</div>
+			<br><br>
+			
+			<center> 
+        <img src="./system_overview.jpg" alt="system overview" width="90%">
+      </center>
+      
+      <p align="justify">      
+      <font size='4'><b>Figure 1.</b> The overview of our method. We extract two kind of feature points at first, namely, well-defined landmarks and detected interesting points, and then forward them to our two-step NRSFM algorithm. 
+      	Furthermore, we recover the complete surface by constraining the surface to pass the reconstructed structure points.
+      	</font>
+      </p>
+      <br><br>
+      
+      
+			<hr style="background:black; border:0; height:1px">
+			
+			
+			<h2>Result</h2>
+			
+			<div><font size='4' face="times new roman">We evaluate our method on BU-3DFE and BU-4DFE datasets, both of which contain images and associated 3d models for several individuals with six expressions. 
+				Since the models in BU-4DFE are temporally varying 3D human faces with expression deformations, we generate testing videos from BU-4DFE and use BU-3dFE for training.</font>
+			</div>
+			
+			<br>
+			<center> 
+        <img src="./prior_based.jpg" alt="Table" width="90%">
+      </center>
+      <p align='left'>
+      	<font size='4'><b>Figure 2.</b> Estimated 3D structures of well-defined points by our MAP formulation. The leftmost column contains input images and 2D track points. 
+      		The two columns in the middle are the 3D structures projected in different views. The back-projection errors are shown at the rightmost column. 
+      		The blue crosses are 2D track points, and the red circles are beck-projections of 3D structre.</font>
+      </p>
+      <br>
+			<center> 
+        <img src="./constrained.jpg" alt="Table" width="90%">
+      </center>
+      <p align='left'>
+      	<font size='4'><b>Figure 3.</b> Estimated 3D structures after our final optimization step. The leftmost column contains input images and 2D track points. 
+      		The two columns in the middle are the 3D structures projected in different views. The back-projection errors are shown at the rightmost column. 
+      		The blue crosses are 2D track points, and the red circles are are beck-projections of 3D structre.</font>
+      </p>
+      <br> <br>      
+			
+        <a href="./video2.WMV">Video of reconstructed surface</a>
+      
+      <br>
+      
+			<hr style="background:black; border:0; height:1px">
+			<br>
+			
+			<h2>Master's Thesis</h2>
+			<font size='4' face="times new roman">Tsung-Yu Lin, and Shang-Hong Lai, Combining Shape Prior with Non-Rigid SfM for Recovering Specific 3D Deformable Surface, <b>Master's Thesis</b>
+				<a href="http://140.113.39.130/cgi-bin/gs32/hugsweb.cgi?o=dnthucdr&s=id=%22GH029762514%22.&searchmode=basic">[pdf]</a>
+			</font>
+			
+      <br><br>
+		</div>
+	
+	</dive>
+	
+	
+	
+</body></html>
